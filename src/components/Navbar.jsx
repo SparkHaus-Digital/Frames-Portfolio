@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import CTAButton from "./CTAButton";
+import { gsap } from "gsap";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navbarRef = useRef(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -17,12 +19,25 @@ const Navbar = () => {
     }
     setIsMobileMenuOpen(false);
   };
+
+  useEffect(() => {
+    gsap.fromTo(
+      navbarRef.current,
+      { y: "-100%", opacity: 0 },
+      {
+        y: "0%",
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      }
+    );
+  }, []);
   return (
-    <nav className="w-full px-6 md:px-20 xl:px-[300px] py-6 text-white">
-      <div className="flex items-center justify-between">
+    <nav ref={navbarRef} className="w-full py-6 text-white">
+      <div className="px-4 flex items-center justify-between w-[50%] mx-auto">
         <div className="font-hatolie font-bold text-4xl">frames</div>
 
-        <div className="hidden lg:flex gap-16 font-bold uppercase text-base items-center">
+        <div className="hidden lg:flex space-x-10 font-bold uppercase text-base tracking-widest">
           <a href="#about" onClick={(e) => handleScroll(e, "about")}>
             About
           </a>
