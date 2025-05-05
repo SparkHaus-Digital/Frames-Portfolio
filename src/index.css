@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: Hatolie;
   src: url("../src/assets/fonts/Hatolie.ttf");
@@ -18,8 +20,6 @@
 body {
   @apply bg-white;
 }
-
-@import "tailwindcss";
 
 @theme {
   --font-hatolie: Hatolie, "sans-serif";

@@ -3,9 +3,14 @@ import PortfolioCard from "../components/PortfolioCard";
 
 const Portfolio = () => {
   return (
-    <section className="px-[100px] py-20">
-      <h2 className="text-6xl font-kugile mb-10 text-center">Portfolio</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section
+      className="px-4 sm:px-10 md:px-16 lg:px-[100px] py-8"
+      id="portfolio"
+    >
+      <h2 className="text-[42px] sm:text-4xl md:text-5xl lg:text-6xl font-kugile mb-4 text-left md:text-center">
+        Portfolio
+      </h2>
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {albums.map((album) => (
           <PortfolioCard
             key={album.id}
