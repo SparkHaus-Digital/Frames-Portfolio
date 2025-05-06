@@ -34,10 +34,10 @@ const Navbar = () => {
   }, []);
   return (
     <nav ref={navbarRef} className="w-full py-6 text-white">
-      <div className="px-4 flex items-center justify-between w-[50%] mx-auto">
+      <div className="px-6 flex items-center justify-between md:w-[50%] mx-auto">
         <div className="font-hatolie font-bold text-4xl">frames</div>
 
-        <div className="hidden lg:flex space-x-10 font-bold uppercase text-base tracking-widest">
+        <div className="hidden lg:flex md:space-x-10 font-bold uppercase text-base tracking-widest">
           <a href="#about" onClick={(e) => handleScroll(e, "about")}>
             About
           </a>

@@ -50,7 +50,7 @@ const Hero = () => {
 
         <div className="mb-32 flex items-center justify-center w-full">
           <div ref={buttonRef} className="mx-auto">
-            <CTAButton text="Get in Touch" className="text-sm px-10 py-3" />
+            <CTAButton text="Get in Touch" className="text-sm px-6 py-2 md:px-12 md:py-3" />
           </div>
         </div>
       </div>
