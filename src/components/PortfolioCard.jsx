@@ -12,7 +12,7 @@ const PortfolioCard = ({ title, subtitle, image }) => {
         <p className="text-[10px] sm:text-xl font-poppins uppercase mb-4 md:mb-8 transform transition-all duration-500 translate-x-[50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
           {subtitle}
         </p>
-        <img src={ArrowIcon} alt="arrow icon" className="h-2 md:h-3" />
+        <img src={ArrowIcon} alt="arrow icon" className="h-2 md:h-3 transform transition-all duration-500 translate-x-[-50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
       </div>
     </div>
   );
