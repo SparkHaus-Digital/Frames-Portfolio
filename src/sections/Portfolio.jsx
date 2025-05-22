@@ -11,12 +11,13 @@ const Portfolio = () => {
         Portfolio
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {albums.map((album) => (
+        {albums.slice(0, 1).map((album) => (
           <PortfolioCard
             key={album.id}
             title={album.title}
             subtitle={album.subtitle}
             image={album.image}
+            placeholder={album.placeholder} 
           />
         ))}
       </div>
