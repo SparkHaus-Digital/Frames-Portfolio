@@ -21,6 +21,12 @@ body {
   @apply bg-white;
 }
 
+@media (min-width: 768px) {
+  .hero-text {
+    padding: 1.5rem;
+  }
+}
+
 @theme {
   --font-hatolie: Hatolie, "sans-serif";
   --font-monserrat-bold: Monserrat-Bold, "sans-serif";
